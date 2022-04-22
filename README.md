@@ -18,6 +18,12 @@ Install torch based on your [architecture](https://pytorch.org/get-started/local
 pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
+Check whether architecture and Cuda versions are installed properly
+
+```
+python3 cuda.py
+```
+
 Now install Huggingface datasets
 ```
 pip3 install datasets
