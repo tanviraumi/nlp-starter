@@ -37,3 +37,9 @@ Some projects (train.py) also requires scipy and sklearn
 ```
 pip3 install scipy sklearn
 ```
+
+To leverage multiple GPUs when writing a training loop yourself (full_train.py), install accelerate
+
+```
+pip3 install accelerate
+```
