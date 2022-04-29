@@ -43,3 +43,33 @@ To leverage multiple GPUs when writing a training loop yourself (full_train.py),
 ```
 pip3 install accelerate
 ```
+
+## Docker
+
+The Dockerfile is just to test CUDA and architecture
+
+```
+docker build -t tanvir/nlp-starter .
+docker run tanvir/nlp-starter .env/bin/python3 cuda.py
+```
+
+## Kubernetes
+Deploy once the cluster and NVIDIA stuff are setup properly.
+
+```
+kubectl apply -f gpu.yaml
+```
+
+Don't worry about the pod errors. You can tail the log to check the architecture and version.
+
+```
+ kubectl logs --follow gpu-test
+```
+
+Delete the pod when the test is done.
+
+```
+kubectl delete pod gpu-test
+```
+
+
